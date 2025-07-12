@@ -1,4 +1,4 @@
-Hi Iam Aksa Vinod 
+Hi Iam Aksa Vinod.  
 This is a simple CRUD(CREATE,READ,UPDATE,DELETE) application built using HTML, CSS, and JavaScript. It allows users to manage student data with fields like Name,Email,and Course.
 
 Features
