@@ -10,8 +10,8 @@
 <body> 
     <div class="container">
         <h1>Student Management</h1>
-        <button onclick="showForm()">+Add Student</button>
-        <form id="studentForm" onsubmit="addStudent(event)">
+        <button onclick="revealForm()">+Add Student</button>
+        <form id="studentForm" onsubmit="saveRecord(event)">
             <input type="hidden" id="studentId">
             <label for="name">Name:</label>
             <input type="name" id="name"placeholder="Name"required><br>
