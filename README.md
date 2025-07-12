@@ -4,8 +4,8 @@ This is a simple CRUD(CREATE,READ,UPDATE,DELETE) application built using HTML, C
 Features
 -  Add New Students
 -  Edit Student Information
--  Delete Students
--  Save Data in Browser using `localStorage`
+-  Delete Students Information
+-  Save Data in Browser using localStorage
 -  Data remains after page refresh or browser restart
 -  Clean and responsive user interface
 
