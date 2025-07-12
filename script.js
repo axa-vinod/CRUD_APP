@@ -1,6 +1,11 @@
 
-let recordList = [];
+let recordList = JSON.parse(localStorage.getItem("recordList")) || [];
 let selectedIndex = -1;
+
+function saveToStorage() {
+  localStorage.setItem("recordList", JSON.stringify(recordList));
+}
+
 
 function revealForm() {
   document.getElementById("studentForm").style.display = "block";
@@ -21,12 +26,13 @@ function saveRecord(event) {
 
   const newRecord = { name, email, course };
 
-  if (selectedIndex === -1) {
+ const id= document.getElementById("studentId").value;
+  if (id=== ""){
     recordList.push(newRecord);
   } else {
-    recordList[selectedIndex] = newRecord;
+    recordList[parseInt(id)] = newRecord;
   }
-
+   saveToStorage();
   clearForm();
   displayRecords();
 }
@@ -75,10 +81,11 @@ function editRecord(index) {
   document.getElementById("course").value = newRecord.course;
   document.getElementById("studentId").value = index;
   selectedIndex = index;
+  saveToStorage();
   revealForm();
 }
-
 function removeRecord(index) {
   recordList.splice(index, 1);
   displayRecords();
 }
+document.addEventListener("DOMContentLoaded",displayRecord);
